@@ -2,9 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
+    buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "com.example.akshay.dustaway"
-        minSdkVersion 19
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -16,15 +17,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.+'
     implementation 'com.google.android.gms:play-services-maps:12.0.0'
     implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile 'com.google.android.gms:play-services-location:12.0.0'
+    compile 'com.android.support:design:26.+'
+    compile 'co.intentservice.android-chat-ui:chat-ui:0.1.1'
+
+
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
+    compile 'com.github.neopixl:PixlUI:v1.1.0'
+
+    compile 'com.ibm.watson.developer_cloud:java-sdk:3.7.2'
 }
 apply plugin: 'com.google.gms.google-services'
