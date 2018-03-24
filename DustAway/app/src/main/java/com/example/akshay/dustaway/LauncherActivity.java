@@ -31,7 +31,6 @@ public class LauncherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
-        cycle = (Button) findViewById(R.id.cycle);
         final ConversationService myConversationService =
                 new ConversationService(
                         "2017-05-26",
