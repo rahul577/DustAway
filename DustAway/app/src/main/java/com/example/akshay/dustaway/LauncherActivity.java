@@ -23,13 +23,13 @@ import co.intentservice.chatui.models.ChatMessage;
 
 public class LauncherActivity extends AppCompatActivity {
 
-    Button cycle;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
+
 
         final ConversationService myConversationService =
                 new ConversationService(
@@ -88,19 +88,29 @@ public class LauncherActivity extends AppCompatActivity {
             }
         });
 
-        cycle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(LauncherActivity.this, cycleActivity.class);
-                startActivity(i);
-            }
-        });
+
 
 
     }
 
 
+    public void camera(View view)
+    {
+        Intent i = new Intent(this, cameraActivity.class);
+        startActivity(i);
+    }
 
+    public void dustbin(View view)
+    {
+        Intent i = new Intent(this, QRScanActivity.class);
+        startActivity(i);
+    }
+
+    public void cycle(View view)
+    {
+        Intent i = new Intent(this, cycleActivity.class);
+        startActivity(i);
+    }
 
 
 }

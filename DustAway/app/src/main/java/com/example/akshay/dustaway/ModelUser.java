@@ -3,6 +3,7 @@ package com.example.akshay.dustaway;
 
 import android.support.annotation.NonNull;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mikepenz.fastadapter.FastAdapter;
@@ -59,16 +60,19 @@ public class ModelUser extends AbstractItem<ModelUser, ModelUser.ViewHolder> {
 
         TextView name;
         TextView points;
+        ImageView image;
 
         public ViewHolder(View view) {
             super(view);
             name = (TextView)view.findViewById(R.id.name);
+            points = (TextView)view.findViewById(R.id.points);
             points = (TextView)view.findViewById(R.id.points);
         }
 
         @Override
         public void bindView(ModelUser item, List<Object> payloads) {
             name.setText(item.getUsername());
+
             points.setText(item.getCash());
         }
 

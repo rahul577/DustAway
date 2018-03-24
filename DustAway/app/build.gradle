@@ -36,7 +36,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:12.0.0'
     implementation 'com.google.firebase:firebase-database:12.0.0'
     implementation 'com.mikepenz:fastadapter:3.2.4@aar'
-    implementation  'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.google.android.gms:play-services:12.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
@@ -53,5 +53,7 @@ dependencies {
     compile 'com.github.neopixl:PixlUI:v1.1.0'
 
     compile 'com.ibm.watson.developer_cloud:java-sdk:3.7.2'
+    compile 'com.ldoublem.thumbUplib:ThumbUplib:0.5'
+
 }
 apply plugin: 'com.google.gms.google-services'
