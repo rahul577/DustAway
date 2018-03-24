@@ -117,7 +117,9 @@ public class QRScanActivity extends AppCompatActivity {
                 Map<String,Object> taskMap = new HashMap();
                 taskMap.put("cash", "25000");
                 taskref.updateChildren(taskMap); //should I use setValue()...?
+                Intent i1 =new Intent(QRScanActivity.this, PointGainActivity.class);
 
+                startActivity(i1);
                 //setting values to textviews
             }
         } else {

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.example.akshay.dustaway"
         minSdkVersion 17
@@ -55,5 +55,6 @@ dependencies {
     compile 'com.ibm.watson.developer_cloud:java-sdk:3.7.2'
     compile 'com.ldoublem.thumbUplib:ThumbUplib:0.5'
 
+    compile 'com.github.IntruderShanky:Squint:3.0.1'
 }
 apply plugin: 'com.google.gms.google-services'

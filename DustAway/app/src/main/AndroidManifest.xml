@@ -60,6 +60,8 @@
         <activity android:name=".QRScanActivity" />
         <activity android:name=".LeaderBoard" />
         <activity android:name=".cameraActivity"></activity>
+        <activity android:name=".PointGainActivity"></activity>
+
     </application>
 
 </manifest>

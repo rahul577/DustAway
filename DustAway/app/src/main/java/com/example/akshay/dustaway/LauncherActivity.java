@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -24,6 +26,26 @@ import co.intentservice.chatui.models.ChatMessage;
 public class LauncherActivity extends AppCompatActivity {
 
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.launcher_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.media_route_menu_item){
+            Intent i = new Intent(this,LeaderBoard.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +109,6 @@ public class LauncherActivity extends AppCompatActivity {
 
             }
         });
-
 
 
 
